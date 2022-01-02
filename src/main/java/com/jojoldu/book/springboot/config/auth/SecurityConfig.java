@@ -13,7 +13,7 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private final SecurityConfig customOauth2UserService;
+    private final CustomOAuth2UserService customOauth2UserService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

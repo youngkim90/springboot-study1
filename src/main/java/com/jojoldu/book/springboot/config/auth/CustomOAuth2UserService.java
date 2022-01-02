@@ -1,5 +1,6 @@
 package com.jojoldu.book.springboot.config.auth;
 
+import com.jojoldu.book.springboot.config.auth.dto.SessionUser;
 import com.jojoldu.book.springboot.domain.user.User;
 import com.jojoldu.book.springboot.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ import java.util.Collections;
 
 @RequiredArgsConstructor
 @Service
-public class CustomOAuth2UserService {
+public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
 
     private final UserRepository userRepository;
     private final HttpSession httpSession;
